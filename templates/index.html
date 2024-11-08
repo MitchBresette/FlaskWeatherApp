@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Search Bar -->
+    <h1>Check the Weather</h1>
+    <form id="city-form">
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+<!-- Celsius / Fahrenheit toggle -->
+    <label for="unit-toggle">(°C/°F)</label>
+    <label class="switch">
+        <input type="checkbox" id="unit-toggle">
+        <span class="slider"></span>
+        <span id="unit-label">°C</span>
+    </label>
+
+    <div id="weather-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
